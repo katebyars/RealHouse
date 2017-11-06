@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "301149566290",
+    "firebase_url": "https://realhouse-798c4.firebaseio.com",
+    "project_id": "realhouse-798c4",
+    "storage_bucket": "realhouse-798c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301149566290:android:cc3552326b3eae4b",
+        "android_client_info": {
+          "package_name": "com.example.guest.realhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301149566290-lmu7dqo5f9fqmvk8ikiboqeqt8tn7v2g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.guest.realhouse",
+            "certificate_hash": "e97b3e61bd821d016b482c7d8a74a7a78a329724"
+          }
+        },
+        {
+          "client_id": "301149566290-e6dolcv5io74ehdovkm159l6mtu2p38f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5WpkPowgxvqiCAVHsQo8C1iIYJbXNWsg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301149566290-e6dolcv5io74ehdovkm159l6mtu2p38f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

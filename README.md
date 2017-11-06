@@ -1,4 +1,4 @@
-# RealHouse
+# RealHouse Android App
 
 #### An app for for sale by owner buyers and sellers to exchange information and participte in open houses.
 
@@ -6,6 +6,14 @@
 
 ## Description
 ### Created during my tenure at Epicodus, Portland in the _**Android Track**_
+
+## To View This Project
+
+| You should: |
+| ----------|
+| Clone the git repo to your computer. |
+| Open in Android Studio. |
+| I used Firebase to authenticate users and keep databases. You may need to go to ![Description]this site(https://developers.google.com/android/guides/client-auth) to get a SHA key in order to open this in Android studio.|
 
 _Although the traditional housing market is well served by apps like Zillow and Trulia, there are very few automated resources for sellers and buyers who want to do business without a realtor. This app links both parties. Currently, I am working on the MVP as my capstone project. Features in progress, additional features, and features which would be implemented past the capstone, are outlined below._
 
