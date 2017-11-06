@@ -43,19 +43,19 @@ _Although the traditional housing market is well served by apps like Zillow and 
 _**This project began with a series of wireframes and user personas, as outlined below.**_
 
 _I determined two personas : The buyer and the seller, and a short list of features they might both want._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/buyerPersonas.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/BuyerPersonas.JPG)
 
 _I created a mock up of what each screen would look like: Splash Activity and Activity Login._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/frame1and2.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/Frame1and2.JPG)
 
 _Main Activity and List My House Activity._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/frame3and4.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/Frame3and4.JPG)
 
 _House Detail Page and the overall look of the app._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/houseDetailAndOverall.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/HouseDetailAndOverall.JPG)
 
 _I mapped out what hte overall project files would be._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/projectStructure.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/ProjectStructure.JPG)
 
 
 ## Known Bugs
