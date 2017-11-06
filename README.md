@@ -7,7 +7,7 @@
 ## Description
 ### Created during my tenure at Epicodus, Portland in the _**Android Track**_
 
-_Although the traditional housing market is well served by apps like Zillow and Trulia, there are very few automated resources for sellers and buyers who want to do business without a realtor. This app links both parties. Currently, I am working on the MVP as my capstone project, although additional features, which would be implemented past the capstone, are outlined below._
+_Although the traditional housing market is well served by apps like Zillow and Trulia, there are very few automated resources for sellers and buyers who want to do business without a realtor. This app links both parties. Currently, I am working on the MVP as my capstone project. Features in progress, additional features, and features which would be implemented past the capstone, are outlined below._
 
 ## Current Specs In Progress
 
@@ -40,7 +40,7 @@ _Although the traditional housing market is well served by apps like Zillow and 
 
 
 ## Wireframing and Thought Process
-_**This project began with a series of wireframes and user personas, as outlined below**_
+_**This project began with a series of wireframes and user personas, as outlined below.**_
 
 _I determined two personas : The buyer and the seller, and a short list of features they might both want._
 ![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/BuyerPersonas.JPG)
@@ -64,11 +64,11 @@ _There are no known bugs in this program but it is currently under development._
 
 ## Support and contact details
 
-_Please let the author know if you have questions. Kate Byars katebyars5@gmail.com_
+_Please let the author know if you have questions. Kate Byars katebyars5@gmail.com._
 
 ## Technologies Used
 
-_Java, Android, Firebase for user authentication, SIMPLYRETS open house API_
+_Java, Android, Firebase for user authentication, SIMPLYRETS open house API._
 
 ## Dependencies needed
 _Dependency list will be filled in here, as features are added._
