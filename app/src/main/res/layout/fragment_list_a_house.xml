@@ -2,12 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.guest.realhouse.ui.ListAHouseFragment">
+    tools:context="com.example.guest.realhouse.ui.ListAHouseFragment"
+    android:background="@color/colorWhite">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="Welcome to the List A House Fragment!"
+        android:textColor="@color/colorBlack"/>
 
 </FrameLayout>
