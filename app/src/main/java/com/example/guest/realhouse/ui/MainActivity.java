@@ -10,15 +10,18 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import com.example.guest.realhouse.R;
 import android.support.v4.view.MenuItemCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private TextView mTextMessage;
 
