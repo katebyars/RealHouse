@@ -95,6 +95,10 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
             houseRef.push().setValue(mHouse);
             Toast.makeText(getActivity(), "Saved", Toast.LENGTH_SHORT).show();
         }
+        mAuthProgressDialog.dismiss();
+        android.app.FragmentManager manager = getFragmentManager();
+        MyHousesFragment myHousesFragment = new MyHousesFragment();
+        manager.beginTransaction().replace(R.id.content, myHousesFragment, myHousesFragment.getTag()).commit();
     }
 
 
@@ -145,11 +149,11 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    Intent intent = new Intent(getActivity(), CreateAccountActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                }
+//                if (user != null) {
+//                    Intent intent = new Intent(getActivity(), CreateAccountActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+//                }
             }
         };
     }
