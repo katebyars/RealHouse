@@ -31,7 +31,7 @@ public class House {
 
     public House() {}
 
-    public House(String crossStreet, String state, String country, String postalCode, String streetName, String streetNumberText, String city, String streetNumber, String fullAddress, String listDate, String agentLastName, String agentEmail, String agentOffice, String agentCell, String agentFirstName, String photos, String listPrice, String listingId, String daysOnMarket, String startTime, String endTime, String description, String refreshments) {
+    public House(String agentFirstName, String streetName) {
 
 
         this.crossStreet = crossStreet;
