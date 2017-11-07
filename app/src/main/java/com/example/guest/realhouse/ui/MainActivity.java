@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.example.guest.realhouse.R;
 import android.support.v4.view.MenuItemCompat;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -42,7 +43,9 @@ public class MainActivity extends AppCompatActivity{
                     return true;
 
                 case R.id.my_houses_nav:
-                    mTextMessage.setText("My Houses");
+                    android.app.FragmentManager manager2 = getFragmentManager();
+                    MyHousesFragment myHousesFragment = new MyHousesFragment();
+                    manager2.beginTransaction().replace(R.id.content, myHousesFragment, myHousesFragment.getTag()).commit();
                     return true;
 
                 case R.id.my_routes:
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity{
 
                 case R.id.logout:
                     mTextMessage.setText("Logout");
+                    Toast.makeText(MainActivity.this, "You are logged out.",
+                            Toast.LENGTH_SHORT).show();
                     logout();
                     return true;
             }
