@@ -1,10 +1,8 @@
-package com.example.guest.realhouse;
+package com.example.guest.realhouse.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.BinderThread;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
 import butterknife.ButterKnife;
-import butterknife.Bind;
+import butterknife.BindView;
 
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,25 +30,25 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    @Bind(R.id.createAccountTextView)
+    @BindView(R.id.createAccountTextView)
     TextView mCreateAccountTextView;
 
-    @Bind(R.id.nameEditText)
+    @BindView(R.id.nameEditText)
     EditText mNameEditText;
 
-    @Bind(R.id.emailEditText)
+    @BindView(R.id.emailEditText)
     EditText mEmailEditText;
 
-    @Bind(R.id.passwordEditText)
+    @BindView(R.id.passwordEditText)
     EditText mPasswordEditText;
 
-    @Bind(R.id.createUserButton)
+    @BindView(R.id.createUserButton)
     Button mCreateUserButton;
 
-    @Bind(R.id.loginTextView)
+    @BindView(R.id.loginTextView)
     TextView mLoginTextView;
 
-    @Bind(R.id.confirmPasswordEditText)
+    @BindView(R.id.confirmPasswordEditText)
     EditText mConfirmPasswordEditText;
 
 

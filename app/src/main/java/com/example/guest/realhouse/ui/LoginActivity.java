@@ -1,12 +1,13 @@
-package com.example.guest.realhouse;
+package com.example.guest.realhouse.ui;
 
 import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Bind;
-import butterknife.OnClick;
+
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
@@ -14,6 +15,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.guest.realhouse.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -28,16 +31,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mAuthProgressDialog;
 
-    @Bind(R.id.registerTextView)
+    @BindView(R.id.registerTextView)
     TextView mRegisterTextView;
 
-    @Bind(R.id.passwordLoginButton)
+    @BindView(R.id.passwordLoginButton)
     Button mPasswordLoginButton;
 
-    @Bind(R.id.emailEditText)
+    @BindView(R.id.emailEditText)
     EditText mEmailEditText;
 
-    @Bind(R.id.passwordEditText)
+    @BindView(R.id.passwordEditText)
     EditText mPasswordEditText;
 
 
@@ -133,5 +136,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });
     }
 }
-
 
