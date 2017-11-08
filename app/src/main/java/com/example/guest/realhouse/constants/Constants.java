@@ -1,4 +1,4 @@
-package com.example.guest.realhouse.Constants;
+package com.example.guest.realhouse.constants;
 
 
 public class Constants {
