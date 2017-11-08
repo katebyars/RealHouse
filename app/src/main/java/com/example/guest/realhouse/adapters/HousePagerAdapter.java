@@ -12,15 +12,17 @@ import java.util.ArrayList;
 
 public class HousePagerAdapter extends FragmentPagerAdapter {
     private ArrayList<House> mHouses;
+    private String mSource;
 
-    public HousePagerAdapter(FragmentManager fm, ArrayList<House> houses) {
+    public HousePagerAdapter(FragmentManager fm, ArrayList<House> houses, String source) {
         super(fm);
         mHouses = houses;
+        mSource = source;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return MyHousesFragment.newInstance(mHouses.get(position));
+        return new MyHousesFragment(mHouses, position, mSource);
     }
 
     @Override
