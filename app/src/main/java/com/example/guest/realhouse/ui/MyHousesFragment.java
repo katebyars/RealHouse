@@ -12,6 +12,7 @@ import android.os.Bundle;
 
 import com.example.guest.realhouse.adapters.FirebaseHouseListAdapter;
 import com.example.guest.realhouse.constants.Constants;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -28,7 +29,7 @@ public class MyHousesFragment extends Fragment {
     RecyclerView mRecyclerView;
 
     private DatabaseReference mHouseReference;
-    private FirebaseHouseListAdapter mFirebaseAdapter;
+    private FirebaseRecyclerAdapter mFirebaseAdapter;
 
     public MyHousesFragment() {
         // Required empty public constructor
@@ -42,24 +43,30 @@ public class MyHousesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_houses, container, false);
         ButterKnife.bind(this, view);
 
+        mHouseReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_SAVED_HOUSES);
         setUpFirebaseAdapter();
         return view;
     }
 
     private void setUpFirebaseAdapter() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String uid = user.getUid();
+        mFirebaseAdapter = new FirebaseHouseListAdapter(House.class, R.layout.house_list_item,
+                FirebaseHouseViewHolder.class, mHouseReference, getActivity()) {
 
-        mHouseReference = FirebaseDatabase
-                .getInstance()
-                .getReference(Constants.FIREBASE_SAVED_HOUSES)
-                .child(uid);
-
-        mFirebaseAdapter = new FirebaseHouseListAdapter(House.class, R.layout.house_list_item_drag,
-        FirebaseHouseViewHolder.class, mHouseReference, getActivity());
+            @Override
+            protected void populateViewHolder(FirebaseHouseViewHolder viewHolder,
+                                              House model, int position) {
+                viewHolder.bindHouse(model);
+            }
+        };
 
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setAdapter(mFirebaseAdapter);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mFirebaseAdapter.cleanup();
     }
 }

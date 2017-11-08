@@ -86,7 +86,9 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
                     .getInstance()
                     .getReference(Constants.FIREBASE_SAVED_HOUSES)
                     .child(uid);
+
             houseRef.push().setValue(mHouse);
+
             Toast.makeText(getActivity(), "Saved", Toast.LENGTH_SHORT).show();
         }
         mAuthProgressDialog.dismiss();
