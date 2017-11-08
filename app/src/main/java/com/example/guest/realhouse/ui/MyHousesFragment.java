@@ -43,7 +43,14 @@ public class MyHousesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_houses, container, false);
         ButterKnife.bind(this, view);
 
-        mHouseReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_SAVED_HOUSES);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+
+        mHouseReference = FirebaseDatabase
+                .getInstance()
+                .getReference(Constants.FIREBASE_SAVED_HOUSES)
+                .child(uid);
+
         setUpFirebaseAdapter();
         return view;
     }

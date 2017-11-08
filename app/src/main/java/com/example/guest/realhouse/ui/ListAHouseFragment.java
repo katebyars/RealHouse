@@ -87,6 +87,9 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
                     .getReference(Constants.FIREBASE_SAVED_HOUSES)
                     .child(uid);
 
+            DatabaseReference pushRef = houseRef.push();
+            String pushId = pushRef.getKey();
+            mHouse.setPushId(pushId);
             houseRef.push().setValue(mHouse);
 
             Toast.makeText(getActivity(), "Saved", Toast.LENGTH_SHORT).show();
