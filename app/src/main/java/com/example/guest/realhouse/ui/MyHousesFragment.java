@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.app.Fragment;
 import android.os.Bundle;
 
-import com.example.guest.realhouse.adapters.FirebaseHouseListAdapter;
+import com.example.guest.realhouse.adapters.HouseListAdapter;
 import com.example.guest.realhouse.constants.Constants;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,7 +19,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import com.example.guest.realhouse.R;
-import com.google.firebase.database.Query;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,7 +55,7 @@ public class MyHousesFragment extends Fragment {
     }
 
     private void setUpFirebaseAdapter() {
-        mFirebaseAdapter = new FirebaseHouseListAdapter(House.class, R.layout.house_list_item,
+        mFirebaseAdapter = new HouseListAdapter(House.class, R.layout.house_list_item,
                 FirebaseHouseViewHolder.class, mHouseReference, getActivity()) {
 
             @Override

@@ -44,7 +44,6 @@ public class FirebaseHouseViewHolder extends RecyclerView.ViewHolder implements 
         TextView addressTextView = (TextView) mView.findViewById(R.id.fragmentHouseDetailAddressTextView);
 
         nameTextView.setText(house.getAgentFirstName());
-        Log.d("first name" , house.getAgentFirstName());
         addressTextView.setText(house.getStreetName());
     }
 
