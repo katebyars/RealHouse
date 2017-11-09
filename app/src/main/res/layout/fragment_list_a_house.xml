@@ -5,49 +5,36 @@
     android:layout_height="match_parent"
     tools:context="com.example.guest.realhouse.ui.ListAHouseFragment">
 
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginStart="168dp"
+        android:layout_weight="0.01"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_logo"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="168dp"
+        android:layout_marginRight="168dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/ownerEditText"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/listAHouseTitleTextView"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintVertical_bias="1.0" />
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="0dp">
 
-        <!--<LinearLayout-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:layout_marginLeft="0dp"-->
-        <!--android:layout_marginRight="0dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="0dp"-->
-        <!--android:orientation="vertical"-->
-        <!--android:weightSum="1"-->
-        <!--app:layout_constraintHorizontal_bias="1.0"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--tools:layout_constraintLeft_creator="1"-->
-        <!--tools:layout_constraintRight_creator="1"-->
-        <!--tools:layout_constraintTop_creator="1">-->
-
-        <ImageView
-            android:id="@+id/logoImageView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginEnd="168dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="168dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="0.01"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_logo"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_constraintLeft_creator="1"
-            tools:layout_constraintRight_creator="1"
-            tools:layout_constraintTop_creator="1" />
 
 
         <TextView
@@ -55,27 +42,23 @@
             android:layout_width="0dp"
             android:layout_height="22dp"
             android:layout_centerHorizontal="true"
-            android:text="List A House"
+            android:text="List Your House"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorAccent"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:layout_constraintTop_creator="1"
             tools:layout_constraintRight_creator="1"
-            tools:layout_constraintBottom_creator="1"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="73dp"
             tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/logoImageView"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/ownerEditText"
-            app:layout_constraintVertical_bias="0.507" />
+            app:layout_constraintHorizontal_bias="0.0" />
 
         <EditText
             android:id="@+id/ownerEditText"
@@ -83,49 +66,139 @@
             android:layout_height="38dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:backgroundTint="@color/colorHint"
-            android:hint="Owner or Agent"
-            android:textAlignment="viewStart"
+            android:hint="House Nickname"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorHint"
             android:textStyle="bold"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            tools:layout_constraintBottom_creator="1"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             tools:layout_constraintLeft_creator="1"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/addressEditText" />
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/streetNumberEditText"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/listAHouseTitleTextView"
+            app:layout_constraintVertical_bias="0.884" />
 
         <EditText
-            android:id="@+id/addressEditText"
+            android:id="@+id/streetNumberEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:backgroundTint="@color/colorHint"
-            android:hint="Address"
+            android:hint="Street Number"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorHint"
             android:textStyle="bold"
             tools:layout_constraintRight_creator="1"
             tools:layout_constraintBottom_creator="1"
-            android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/streetNameEditText"
+            app:layout_constraintRight_toRightOf="@+id/ownerEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="203dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.0" />
+            android:layout_marginBottom="22dp"
+            app:layout_constraintLeft_toLeftOf="@+id/ownerEditText" />
+
+        <EditText
+            android:id="@+id/streetNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/colorHint"
+            android:hint="Street Name"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorHint"
+            android:textStyle="bold"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/cityEditText"
+            app:layout_constraintRight_toRightOf="@+id/streetNumberEditText"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintLeft_toLeftOf="@+id/streetNumberEditText" />
+
+        <EditText
+            android:id="@+id/cityEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/colorHint"
+            android:hint="City"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorHint"
+            android:textStyle="bold"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/stateEditText"
+            app:layout_constraintRight_toRightOf="@+id/streetNameEditText"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintLeft_toLeftOf="@+id/streetNameEditText" />
+
+        <EditText
+            android:id="@+id/stateEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/colorHint"
+            android:hint="State"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorHint"
+            android:textStyle="bold"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/zipEditText"
+            app:layout_constraintRight_toRightOf="@+id/cityEditText"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintLeft_toLeftOf="@+id/cityEditText" />
+
+        <EditText
+            android:id="@+id/zipEditText"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/colorHint"
+            android:hint="Zip"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorHint"
+            android:textStyle="bold"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/imageURLEditText"
+            app:layout_constraintRight_toRightOf="@+id/stateEditText"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintLeft_toLeftOf="@+id/stateEditText" />
+
+        <EditText
+            android:id="@+id/imageURLEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/colorHint"
+            android:hint="Image URL"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorHint"
+            android:textStyle="bold"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/saveHouseButton"
+            app:layout_constraintRight_toRightOf="@+id/zipEditText"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/zipEditText" />
 
         <Button
             android:id="@+id/saveHouseButton"

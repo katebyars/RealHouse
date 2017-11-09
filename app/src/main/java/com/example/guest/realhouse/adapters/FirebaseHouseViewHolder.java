@@ -3,7 +3,9 @@ package com.example.guest.realhouse.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.guest.realhouse.R;
@@ -17,16 +19,19 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
 import org.parceler.Parcels;
 import java.util.ArrayList;
 
 public class FirebaseHouseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-
+    private String image2;
     private static final int MAX_WIDTH = 1000;
     private static final int MAX_HEIGHT = 1000;
 
     View mView;
     Context mContext;
+
 
     public FirebaseHouseViewHolder(View itemView) {
         super(itemView);
@@ -37,11 +42,32 @@ public class FirebaseHouseViewHolder extends RecyclerView.ViewHolder implements 
 
     public void bindHouse(House house) {
 
-        TextView nameTextView = (TextView) mView.findViewById(R.id.fragmentHouseDetailOwnerNameTextView);
-        TextView addressTextView = (TextView) mView.findViewById(R.id.fragmentHouseDetailAddressTextView);
+        TextView ownerTextView = (TextView) mView.findViewById(R.id.fragmentHouseDetailOwnerNameTextView);
+        TextView streetNumber = (TextView) mView.findViewById(R.id.fragmentHouseDetailStreetNumberTextView);
+        TextView streetName = (TextView) mView.findViewById(R.id.fragmentHouseDetailStreetNameTextView);
+        TextView city = (TextView) mView.findViewById(R.id.fragmentHouseDetailCityTextView);
+        TextView state = (TextView) mView.findViewById(R.id.fragmentHouseDetailStateTextView);
+        TextView zip = (TextView) mView.findViewById(R.id.fragmentHouseDetailZipTextView);
+        ImageView image = (ImageView) mView.findViewById(R.id.fragmentHouseDetailPhotoImageView);
 
-        nameTextView.setText(house.getAgentFirstName());
-        addressTextView.setText(house.getStreetName());
+
+        ownerTextView.setText(house.getAgentFirstName());
+        streetNumber.setText(house.getStreetNumber());
+        streetName.setText(house.getStreetName());
+        city.setText(house.getCity());
+        state.setText(house.getState());
+        zip.setText(house.getZip());
+
+
+        image2 = house.getPhotos();
+
+        Log.d("image", image2);
+
+        Picasso.with(mContext)
+                .load(house.getPhotos())
+                .resize(MAX_WIDTH, MAX_HEIGHT)
+                .centerCrop()
+                .into(image);
     }
 
     @Override
