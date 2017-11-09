@@ -1,32 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+        <ImageView
+            android:id="@+id/fragmentHouseDetailPhotoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_editor_absoluteX="-3dp" />
 
             <TextView
-                android:background="@color/colorHint"
+                android:textColor="@color/colorAccent"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Owner Name"
                 android:id="@+id/fragmentHouseDetailOwnerNameTextView"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:layout_constraintRight_creator="1"
+                tools:layout_constraintBottom_creator="1"
+                app:layout_constraintBottom_toTopOf="@+id/fragmentHouseDetailStreetNumberTextView"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="17dp"
+                tools:layout_constraintLeft_creator="1"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentHouseDetailPhotoImageView" />
 
             <TextView
-                android:background="@color/colorHint"
+                android:textColor="@color/colorAccent"
                 android:layout_alignParentTop="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Street Name"
-                android:id="@+id/fragmentHouseDetailAddressTextView"
+                android:text="Street Number"
+                android:id="@+id/fragmentHouseDetailStreetNumberTextView"
                 android:layout_alignParentRight="true"
-                android:textColor="@color/colorAccent"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/fragmentHouseDetailStreetNameTextView"
+                tools:layout_constraintBaseline_creator="1"
+                tools:layout_constraintLeft_creator="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp" />
 
-        </RelativeLayout>
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Street Name"
+            android:id="@+id/fragmentHouseDetailStreetNameTextView"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/fragmentHouseDetailCityTextView"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/fragmentHouseDetailStreetNumberTextView"
+            android:layout_marginLeft="12dp" />
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:id="@+id/fragmentHouseDetailCityTextView"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:layout_marginStart="11dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/fragmentHouseDetailStateTextView"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/fragmentHouseDetailStreetNameTextView"
+            android:layout_marginLeft="11dp" />
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State"
+            android:id="@+id/fragmentHouseDetailStateTextView"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            tools:layout_constraintBottom_creator="1"
+            android:layout_marginStart="7dp"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/fragmentHouseDetailCityTextView"
+            android:layout_marginLeft="40dp"
+            tools:layout_editor_absoluteY="177dp" />
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zip"
+            android:id="@+id/fragmentHouseDetailZipTextView"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:layout_marginStart="17dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/fragmentHouseDetailStateTextView"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/fragmentHouseDetailStateTextView"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <!--</RelativeLayout>-->
+
+    </android.support.constraint.ConstraintLayout>
 </LinearLayout>

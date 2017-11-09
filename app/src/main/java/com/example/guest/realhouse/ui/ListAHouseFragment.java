@@ -27,7 +27,12 @@ import butterknife.ButterKnife;
 
 public class ListAHouseFragment extends Fragment implements View.OnClickListener {
     private String mOwner;
-    private String mAddress;
+    private String mStreetNumber;
+    private String mStreetName;
+    private String mCity;
+    private String mState;
+    private String mZip;
+    private String mImage;
 
     @BindView(R.id.saveHouseButton)
     Button mSaveHouseButton;
@@ -35,8 +40,23 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
     @BindView(R.id.ownerEditText)
     EditText mOwnerEditText;
 
-    @BindView(R.id.addressEditText)
-    EditText mAddressEditText;
+    @BindView(R.id.streetNumberEditText)
+    EditText mStreetNumberEditText;
+
+    @BindView(R.id.streetNameEditText)
+    EditText mStreetNameEditText;
+
+    @BindView(R.id.cityEditText)
+    EditText mCityEditText;
+
+    @BindView(R.id.stateEditText)
+    EditText mStateEditText;
+
+    @BindView(R.id.zipEditText)
+    EditText mZipEditText;
+
+    @BindView(R.id.imageURLEditText)
+    EditText mImageURLEditText;
 
     private House mHouse;
 
@@ -103,19 +123,26 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
 
     private void createNewHouse() {
         mOwner = mOwnerEditText.getText().toString().trim();
-        mAddress = mAddressEditText.getText().toString().trim();
-
-        Log.d("mOwner", mOwner);
-        Log.d("mAddress", mAddress);
+        mStreetNumber = mStreetNumberEditText.getText().toString().trim();
+        mStreetName = mStreetNameEditText.getText().toString().trim();
+        mCity = mCityEditText.getText().toString().trim();
+        mState = mStateEditText.getText().toString().trim();
+        mZip = mZipEditText.getText().toString().trim();
+        mImage = mImageURLEditText.getText().toString().trim();
 
         boolean validOwner = isValidOwner(mOwner);
-        boolean validAddress = isValidAddress(mAddress);
+        boolean validStreetNumber = isValidStreetNumber(mStreetNumber);
+        boolean validStreetName = isValidStreetName(mStreetName);
+        boolean validCity = isValidCity(mCity);
+        boolean validState = isValidState(mState);
+        boolean validZip = isValidZip(mZip);
+        boolean validImage = isValidImage(mImage);
 
-        if (!validAddress || !validOwner) return;
+        if (!validStreetNumber || !validOwner || !validStreetName || !validCity || !validState || !validZip || !validImage ) return;
 
         mAuthProgressDialog.show();
 
-        mHouse = new House(mOwner, mAddress);
+        mHouse = new House(mOwner, mStreetNumber, mStreetName, mCity, mState, mZip, mImage);
 
         }
 
@@ -127,9 +154,44 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
         return true;
     }
 
-    private boolean isValidAddress(String address) {
-        if (address.equals("")) {
-            mAddressEditText.setError("Please enter the home address");
+    private boolean isValidStreetNumber(String streetNumber) {
+        if (streetNumber.equals("")) {
+            mStreetNumberEditText.setError("Enter your info here");
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidStreetName(String streetName) {
+        if (streetName.equals("")) {
+            mStreetNameEditText.setError("Enter your info here");
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidCity(String city) {
+        if (city.equals("")) {
+            mCityEditText.setError("Enter your info here");
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidState(String state) {
+        if (state.equals("")) {
+            mStateEditText.setError("Enter your info here");
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidZip(String zip) {
+        if (zip.equals("")) {
+            mZipEditText.setError("Enter your info here");
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidImage(String image) {
+        if (image.equals("")) {
+            mImageURLEditText.setError("Enter your info here");
             return false;
         }
         return true;
@@ -142,7 +204,7 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
         mAuthProgressDialog.setCancelable(false);
     }
 
-//do I need method below?
+
     private void createAuthStateListener() {
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
