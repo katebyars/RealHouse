@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity{
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.profile_nav:
-                    mTextMessage.setText("Profile");
                     return true;
 
                 case R.id.list_a_house_nav:

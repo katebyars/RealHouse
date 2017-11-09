@@ -3,6 +3,7 @@ package com.example.guest.realhouse.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,12 +25,13 @@ import org.parceler.Parcels;
 import java.util.ArrayList;
 
 public class FirebaseHouseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-
+    private String image2;
     private static final int MAX_WIDTH = 1000;
     private static final int MAX_HEIGHT = 1000;
 
     View mView;
     Context mContext;
+
 
     public FirebaseHouseViewHolder(View itemView) {
         super(itemView);
@@ -50,18 +52,22 @@ public class FirebaseHouseViewHolder extends RecyclerView.ViewHolder implements 
 
 
         ownerTextView.setText(house.getAgentFirstName());
-        streetNumber.setText(house.getStreetNumberText());
+        streetNumber.setText(house.getStreetNumber());
         streetName.setText(house.getStreetName());
         city.setText(house.getCity());
         state.setText(house.getState());
         zip.setText(house.getZip());
 
+
+        image2 = house.getPhotos();
+
+        Log.d("image", image2);
+
         Picasso.with(mContext)
                 .load(house.getPhotos())
                 .resize(MAX_WIDTH, MAX_HEIGHT)
                 .centerCrop()
-                .into(image
-                );
+                .into(image);
     }
 
     @Override
