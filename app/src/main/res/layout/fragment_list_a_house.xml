@@ -60,7 +60,7 @@
             app:layout_constraintBottom_toTopOf="@+id/streetNameEditText"
             app:layout_constraintRight_toRightOf="@+id/ownerEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="15dp"
             app:layout_constraintLeft_toLeftOf="@+id/ownerEditText"
             app:layout_constraintHorizontal_bias="0.0" />
 
@@ -117,11 +117,12 @@
             android:textStyle="bold"
             tools:layout_constraintRight_creator="1"
             tools:layout_constraintBottom_creator="1"
-            app:layout_constraintBottom_toTopOf="@+id/zipEditText"
             app:layout_constraintRight_toRightOf="@+id/cityEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="15dp"
-            app:layout_constraintLeft_toLeftOf="@+id/cityEditText" />
+            app:layout_constraintLeft_toLeftOf="@+id/cityEditText"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/zipEditText" />
 
         <EditText
             android:id="@+id/zipEditText"
@@ -134,8 +135,9 @@
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorHint"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/stateEditText"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/imageURLEditText" />
 
         <EditText
@@ -149,8 +151,9 @@
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorHint"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/zipEditText"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/saveHouseButton" />
 
         <Button
@@ -163,7 +166,7 @@
             android:textColor="@color/colorWhite"
             android:textSize="15sp"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="454dp" />
+            tools:layout_editor_absoluteY="401dp" />
 
         <!--</LinearLayout>-->
     </android.support.constraint.ConstraintLayout>

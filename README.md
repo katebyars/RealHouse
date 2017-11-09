@@ -54,16 +54,16 @@ _I determined two personas : The buyer and the seller, and a short list of featu
 ![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/BuyerPersonas.JPG)
 
 _I created a mock up of what each screen would look like: Splash Activity and Activity Login._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/Frame1and2.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/frame1and2.JPG)
 
 _Main Activity and List My House Activity._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/Frame3and4.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/frame3and4.JPG)
 
 _House Detail Page and the overall look of the app._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/HouseDetailAndOverall.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/houseDetailAndOverall.JPG)
 
 _I mapped out what hte overall project files would be._
-![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/ProjectStructure.JPG)
+![Description](https://github.com/katebyars/RealHouse/blob/master/app/src/main/res/drawable/projectStructure.JPG)
 
 
 ## Known Bugs
