@@ -5,14 +5,15 @@ import org.parceler.Parcel;
 @Parcel
 public class House {
 
+    String streetNumberText;
+    String streetNumber;
+    String streetName;
+    String city;
+    String zip;
     String crossStreet;
     String state;
     String country;
     String postalCode;
-    String streetName;
-    String streetNumberText;
-    String city;
-    String streetNumber;
     String fullAddress;
     String listDate;
     String agentLastName;
@@ -32,9 +33,7 @@ public class House {
 
     public House() {}
 
-    public House(String agentFirstName, String streetName) {
-
-
+    public House(String agentFirstName, String streetNumber, String streetName, String city, String state, String zip, String photos) {
         this.crossStreet = crossStreet;
         this.state = state;
         this.country = country;
@@ -58,6 +57,15 @@ public class House {
         this.endTime = endTime;
         this.description = description;
         this.refreshments = refreshments;
+        this.zip = zip;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
     public String getCrossStreet() {
