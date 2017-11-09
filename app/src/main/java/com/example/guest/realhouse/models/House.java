@@ -28,6 +28,7 @@ public class House {
     String endTime;
     String description;
     String refreshments;
+    private String pushId;
 
     public House() {}
 
@@ -241,5 +242,13 @@ public class House {
 
     public void setRefreshments(String refreshments) {
         this.refreshments = refreshments;
+    }
+
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
     }
 }
