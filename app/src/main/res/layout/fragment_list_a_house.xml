@@ -71,7 +71,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:backgroundTint="@color/colorHint"
-            android:hint="Owner or Agent"
+            android:hint="House Nickname"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorHint"
             android:textStyle="bold"
