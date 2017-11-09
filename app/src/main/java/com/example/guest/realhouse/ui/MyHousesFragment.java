@@ -1,7 +1,7 @@
 package com.example.guest.realhouse.ui;
 import com.example.guest.realhouse.adapters.FirebaseHouseViewHolder;
 import com.example.guest.realhouse.models.House;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
@@ -49,6 +49,7 @@ public class MyHousesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_houses, container, false);
         ButterKnife.bind(this, view);
 
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
 
@@ -59,7 +60,7 @@ public class MyHousesFragment extends Fragment {
 
         mFirebaseAdapter = new FirebaseHouseListAdapter(House.class,
                 R.layout.house_list_item, FirebaseHouseViewHolder.class,
-                query, this, getActivity());
+                query, getActivity());
 
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -72,6 +73,6 @@ public class MyHousesFragment extends Fragment {
                 mFirebaseAdapter.notifyDataSetChanged();
             }
         });
-
-
+        return view;
+    }
 }

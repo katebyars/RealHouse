@@ -22,7 +22,8 @@ public class HousePagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new MyHousesFragment(mHouses, position, mSource);
+        return null;
+//        return MyHousesFragment.newInstance(mHouses, position, mSource);
     }
 
     @Override
