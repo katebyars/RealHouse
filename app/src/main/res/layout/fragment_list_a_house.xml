@@ -5,37 +5,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.guest.realhouse.ui.ListAHouseFragment">
 
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginStart="168dp"
-        android:layout_weight="0.01"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_logo"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="168dp"
-        android:layout_marginRight="168dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/ownerEditText"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/listAHouseTitleTextView"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintVertical_bias="1.0" />
-
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="0dp">
-
-
 
         <TextView
             android:id="@+id/listAHouseTitleTextView"
@@ -49,16 +23,18 @@
             android:textStyle="bold"
             tools:layout_constraintTop_creator="1"
             tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
             android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ownerEditText"
             android:layout_marginEnd="8dp"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="73dp"
+            android:layout_marginTop="55dp"
             tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="41dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.0" />
+            android:layout_marginRight="8dp" />
 
         <EditText
             android:id="@+id/ownerEditText"
@@ -66,26 +42,22 @@
             android:layout_height="38dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
             android:backgroundTint="@color/colorHint"
             android:hint="House Nickname"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorHint"
             android:textStyle="bold"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1"
             tools:layout_constraintBottom_creator="1"
             app:layout_constraintBottom_toTopOf="@+id/streetNumberEditText"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/listAHouseTitleTextView"
-            app:layout_constraintVertical_bias="0.884" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
 
         <EditText
             android:id="@+id/streetNumberEditText"
@@ -103,7 +75,7 @@
             app:layout_constraintBottom_toTopOf="@+id/streetNameEditText"
             app:layout_constraintRight_toRightOf="@+id/ownerEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="22dp"
+            android:layout_marginBottom="19dp"
             app:layout_constraintLeft_toLeftOf="@+id/ownerEditText" />
 
         <EditText
@@ -122,7 +94,7 @@
             app:layout_constraintBottom_toTopOf="@+id/cityEditText"
             app:layout_constraintRight_toRightOf="@+id/streetNumberEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="13dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintLeft_toLeftOf="@+id/streetNumberEditText" />
 
         <EditText
@@ -141,7 +113,7 @@
             app:layout_constraintBottom_toTopOf="@+id/stateEditText"
             app:layout_constraintRight_toRightOf="@+id/streetNameEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="14dp"
+            android:layout_marginBottom="21dp"
             app:layout_constraintLeft_toLeftOf="@+id/streetNameEditText" />
 
         <EditText
@@ -160,7 +132,7 @@
             app:layout_constraintBottom_toTopOf="@+id/zipEditText"
             app:layout_constraintRight_toRightOf="@+id/cityEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="17dp"
             app:layout_constraintLeft_toLeftOf="@+id/cityEditText" />
 
         <EditText
@@ -176,49 +148,52 @@
             android:textStyle="bold"
             tools:layout_constraintRight_creator="1"
             tools:layout_constraintBottom_creator="1"
-            app:layout_constraintBottom_toTopOf="@+id/imageURLEditText"
             app:layout_constraintRight_toRightOf="@+id/stateEditText"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="15dp"
-            app:layout_constraintLeft_toLeftOf="@+id/stateEditText" />
+            app:layout_constraintLeft_toLeftOf="@+id/stateEditText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="152dp" />
 
         <EditText
             android:id="@+id/imageURLEditText"
-            android:layout_width="0dp"
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorHint"
             android:hint="Image URL"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorHint"
             android:textStyle="bold"
-            tools:layout_constraintRight_creator="1"
-            tools:layout_constraintBottom_creator="1"
-            app:layout_constraintBottom_toTopOf="@+id/saveHouseButton"
-            app:layout_constraintRight_toRightOf="@+id/zipEditText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zipEditText"
             tools:layout_constraintLeft_creator="1"
-            app:layout_constraintLeft_toLeftOf="@+id/zipEditText" />
+            tools:layout_constraintTop_creator="1" />
 
         <Button
             android:id="@+id/saveHouseButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:background="@color/colorAccent"
             android:text="Save House"
             android:textColor="@color/colorWhite"
             android:textSize="15sp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_constraintTop_creator="1"
             tools:layout_constraintRight_creator="1"
-            tools:layout_constraintLeft_creator="1" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintRight_toRightOf="@+id/imageURLEditText"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageURLEditText"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="6dp" />
 
         <!--</LinearLayout>-->
     </android.support.constraint.ConstraintLayout>

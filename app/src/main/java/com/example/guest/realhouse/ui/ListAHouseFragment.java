@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.guest.realhouse.constants.Constants;
 import com.example.guest.realhouse.R;
+import com.example.guest.realhouse.constants.Constants;
 import com.example.guest.realhouse.models.House;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
@@ -34,7 +34,8 @@ public class ListAHouseFragment extends Fragment implements View.OnClickListener
     private String mZip;
     private String mImage;
 
-    @BindView(R.id.saveHouseButton)
+    @BindView(R
+            .id.saveHouseButton)
     Button mSaveHouseButton;
 
     @BindView(R.id.ownerEditText)

@@ -1,4 +1,5 @@
 package com.example.guest.realhouse.ui;
+import com.example.guest.realhouse.R;
 import com.example.guest.realhouse.adapters.FirebaseHouseViewHolder;
 import com.example.guest.realhouse.models.House;
 import android.app.Fragment;
@@ -22,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import com.example.guest.realhouse.R;
+
 import com.google.firebase.database.Query;
 
 import java.util.ArrayList;

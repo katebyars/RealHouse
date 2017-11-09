@@ -1,4 +1,5 @@
 package com.example.guest.realhouse.ui;
+import com.example.guest.realhouse.R;
 import com.example.guest.realhouse.ui.ListAHouseFragment;
 import android.app.FragmentManager;
 import android.content.Intent;
@@ -12,7 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
-import com.example.guest.realhouse.R;
+
 import android.support.v4.view.MenuItemCompat;
 import android.widget.Toast;
 
@@ -48,11 +49,9 @@ public class MainActivity extends AppCompatActivity{
                     return true;
 
                 case R.id.my_routes:
-                    mTextMessage.setText("My Routes");
                     return true;
 
                 case R.id.logout:
-                    mTextMessage.setText("Logout");
                     Toast.makeText(MainActivity.this, "You are logged out.",
                             Toast.LENGTH_SHORT).show();
                     logout();

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import com.example.guest.realhouse.R;
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
@@ -16,7 +17,7 @@ import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.guest.realhouse.R;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
